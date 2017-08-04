@@ -5,20 +5,22 @@ ap-group "MRCA"
    virtual-ap "vap-uofw"
    virtual-ap "vap-eduroam"
    dot11a-radio-profile "dot11a-pwr-9-127"
-   dot11g-radio-profile "dot11g-pwr-15-127"
+   dot11g-radio-profile "dot11g-pwr-9-15"
    ap-system-profile "lms-uwwc-sea-ads-26"
    dot11a-traffic-mgmt-profile "preferred-access"
    dot11g-traffic-mgmt-profile "preferred-access"
+   regulatory-domain-profile "default-dfs"
 
 ap-group "ALD"
    virtual-ap "vap-eduroam"
    virtual-ap "vap-uofw"
    dot11a-radio-profile "dot11a-uw-standard"
-   dot11g-radio-profile "dot11g-pwr-6-12"
+   dot11g-radio-profile "dot11g-pwr-9-15"
    ap-system-profile "lms-uwwc-sea-atg-25"
    dot11a-traffic-mgmt-profile "preferred-access"
    dot11g-traffic-mgmt-profile "preferred-access"
    regulatory-domain-profile "default-dfs"
+
 
 uwws-wgb-01
 
@@ -30,22 +32,26 @@ ap-group "ADMC"
    ap-system-profile "lms-uwws-wgb-01"
    dot11a-traffic-mgmt-profile "preferred-access"
    dot11g-traffic-mgmt-profile "preferred-access"
+   regulatory-domain-profile "default-dfs"
 
 ap-group "WCG"
    virtual-ap "vap-uw-kne-03"
    virtual-ap "vap-eduroam"
+   dot11a-radio-profile "dot11a-uw-standard"
+   dot11g-radio-profile "dot11g-uw-standard"
    ap-system-profile "lms-uwws-kne-03"
    dot11a-traffic-mgmt-profile "preferred-access"
    dot11g-traffic-mgmt-profile "preferred-access"
+   regulatory-domain-profile "default-dfs"
 
 rf arm-profile "arm-uw-standard-dot11g"
    40MHz-allowed-bands None
    no 80MHz-support
    max-tx-power 15
-   min-tx-power 6
+   min-tx-power 9
 
 rf arm-profile "arm-uw-standard-dot11a"
    40MHz-allowed-bands None
    no 80MHz-support
    max-tx-power 21
-   min-tx-power 12
+   min-tx-power 15
